@@ -1,9 +1,10 @@
 const spoofNavigator = (property, value) => {
     Object.defineProperty(navigator, property, { get: () => value });
 };
-spoofNavigator('userAgent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Mobile/15E148 Safari/605.1.15');
-spoofNavigator('platform', 'iPhone');
-spoofNavigator('vendor', 'Apple Computer, Inc.');
+
+spoofNavigator('userAgent', 'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.77 Mobile Safari/537.36');
+spoofNavigator('platform', 'Android');
+spoofNavigator('vendor', 'Google Inc.');
 
 // WebView
 (function () {
